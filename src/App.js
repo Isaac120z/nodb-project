@@ -9,7 +9,7 @@ class App extends Component {
     super();
     this.state = {
       characters: [],
-      title: "Super Heroes"
+      title: "Superheroes"
     };
     this.deleteCharacter = this.deleteCharacter.bind(this);
     this.updateCharacterName = this.updateCharacterName.bind(this);
@@ -28,6 +28,7 @@ componentDidMount() {
 }
 
 updateCharacterName(id,name){
+  console.log(id, name)
   axios
   .put(`api/character/${id}`,{name})
   .then(res => {

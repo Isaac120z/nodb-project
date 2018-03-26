@@ -12,7 +12,7 @@ app.use(json());
 
 app.get("/api/characters",charCtrl.getCharacters);
 //app.post("/api/characters",charCtrl.Characters);
-app.put("/api/characters/:id",charCtrl.updateCharacters);
+app.put("/api/character/:id",charCtrl.updateCharacters);
 app.delete("/api/characters/:id",charCtrl.deleteCharacters);
 
 

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 class Characters extends Component {
     constructor(props){
-        super(props)
+        super()
         this.state = {flag: false,
         name: ''};
     
@@ -14,13 +14,14 @@ class Characters extends Component {
        }
        handleName(val){
             this.setState ({name:val})
-            console.log(this.state.name)
        }
+
+    
     render(){
         let {deleteChar,characters,editChar} = this.props;
+        let {name} = this.state;
 
         var characterList = characters.map((e,i)=> { 
-
         return(
             <div key={e.id}>
             <h4>{e.name}</h4>
@@ -30,14 +31,14 @@ class Characters extends Component {
             {!this.state.flag ?
 
             <div>
-                <button onClick={()=>this.props.deleteChar(e.id)}>delete</button>
-                <button onClick={this.handleFlag}>edit</button>
+                <button onClick={()=>this.props.deleteChar(e.id)}>Delete Character</button>
+                <button onClick={this.handleFlag}>Edit Name</button>
             </div>    
                 :
             <div>    
             <input onChange={e=> this.handleName(e.target.value)} />
-            <button onClick = {this.handleFlag}>cancel</button>
-            <button onClick = {()=>editChar(this.state.name)}>confirm</button> </div>}
+            <button onClick = {this.handleFlag}>Go Back</button>
+            <button onClick = {()=>editChar(e.id,name)}>Confirm</button> </div>}
             </div>
             )
         })

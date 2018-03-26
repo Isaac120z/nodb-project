@@ -14,7 +14,7 @@ getCharacters: (req,res) => {
 
 if(!characters.length){
     axios
-    .get(`https://www.giantbomb.com/api/characters/?api_key=${key}&format=json&limit=6`)
+    .get(`https://www.giantbomb.com/api/characters/?api_key=${key}&format=json&limit=10`)
     .then(list =>{
         console.log(list.data)
         characters = list.data.results.map(e => {
@@ -32,7 +32,8 @@ else{
 updateCharacters: (req,res)=>{
     let {id} = req.params;
   let {name}=req.body;
-  characters.map(character => character.id === id ? character.name = name : null)
+var index = characters.findIndex(e => e.id === parseInt(id));
+characters[index].name = name;
   res.status(200).json(characters)
 },
 deleteCharacters: (req,res)=> {
