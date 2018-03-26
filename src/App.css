@@ -2,9 +2,8 @@
   flex: right;
   text-align: center;
   width: 70%;
-  background-color: aqua;
+ 
 }
-
 h1{
   background-color: yellow;
   color: red;
@@ -12,8 +11,9 @@ h1{
 
 .FavoriteList {
   flex: right;
-  background-color: blue;
+ 
   width: 30%;
+  background-image: url("./superbackground.jpg");
 
 }
 
