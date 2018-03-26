@@ -12,6 +12,7 @@ class App extends Component {
       title: "Super Heroes"
     };
     this.deleteCharacter = this.deleteCharacter.bind(this);
+    this.updateCharacterName = this.updateCharacterName.bind(this);
   }
 
 componentDidMount() {

@@ -45,5 +45,19 @@ deleteCharacters: (req,res)=> {
 
 postCharacter: (req, res) => {
     const {name} = req.body;
-    let url = (`https://www.giantbomb.com/api/characters/?`)
+    res.status(200).json(characters);
 }}
+
+
+// updateCharacter: (req, res) => {
+//     const { id } = req.params;
+//     const { name, birth_year } = req.body;
+//     //From characters, find the object that has the matching id as the parameter, then give name and birth_year property new values
+//     characters.forEach(person => {
+//       if (person.url.split("/")[5] === id) {
+//         person.name = name;
+//         person.birth_year = birth_year;
+//       }
+//     });
+//     //Then send the characters
+//     res.status(200).json(characters);

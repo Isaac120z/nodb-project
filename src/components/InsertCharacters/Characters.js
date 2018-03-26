@@ -23,20 +23,24 @@ class Characters extends Component {
 
         return(
             <div key={e.id}>
-            <h2>{e.name}</h2>
+            <h4>{e.name}</h4>
             <h2>{e.id}</h2>
-            <img src={e.image} height = "60px" width ="60px"/>
-            {/* {!this.state.flag ? */}
-            <button onClick={()=>this.props.deleteChar(e.id)}>delete</button>
-            <button onClick={this.handleFlag}>edit</button>:
+            <img src={e.image} height = "100px" width ="100px"/>
+            
+            {!this.state.flag ?
+
+            <div>
+                <button onClick={()=>this.props.deleteChar(e.id)}>delete</button>
+                <button onClick={this.handleFlag}>edit</button>
+            </div>    
+                :
+            <div>    
             <input onChange={e=> this.handleName(e.target.value)} />
             <button onClick = {this.handleFlag}>cancel</button>
-            <button onClick = {()=>editChar(this.state.name)}>confirm</button>}
+            <button onClick = {()=>editChar(this.state.name)}>confirm</button> </div>}
             </div>
-            
             )
         })
-
         
         return(
             <div>
