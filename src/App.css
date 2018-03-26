@@ -1,33 +1,23 @@
 .App {
+  flex: right;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  width: 70%;
+  background-color: aqua;
 }
 
 h1{
   background-color: yellow;
-  color: rgb(49, 0, 128);
+  color: red;
+}
+
+.FavoriteList {
+  flex: right;
+  background-color: blue;
+  width: 30%;
+
+}
+
+.both{
+  display: flex;
+  flex: space-between;
 }

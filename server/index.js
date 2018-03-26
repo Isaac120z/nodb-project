@@ -11,7 +11,7 @@ const charCtrl = require("./controllers/characters_controller");
 app.use(json());
 
 app.get("/api/characters",charCtrl.getCharacters);
-//app.post("/api/characters",charCtrl.Characters);
+app.post("/api/characters/:id",charCtrl.postCharacters);
 app.put("/api/character/:id",charCtrl.updateCharacters);
 app.delete("/api/characters/:id",charCtrl.deleteCharacters);
 

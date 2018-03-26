@@ -33,6 +33,7 @@ class Characters extends Component {
             <div>
                 <button onClick={()=>this.props.deleteChar(e.id)}>Delete Character</button>
                 <button onClick={this.handleFlag}>Edit Name</button>
+                <button onClick={()=>this.props.postChar(e.id)}>Favorites List</button>
             </div>    
                 :
             <div>    
